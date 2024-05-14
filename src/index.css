@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-paragraph overflow-x-hidden scroll-smooth;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.input {
+  @apply outline-none border-[1px] border-slate-300 transition ease-in-out focus:border-primary;
+}
+.button {
+  @apply bg-primary font-bold text-light bg-opacity-80 transition ease-in-out hover:bg-opacity-100;
+}
+.icon {
+  @apply text-icon opacity-80 transition ease-in-out hover:opacity-100;
+}
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hidden-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Color */
+.red-700 {
+  @apply text-red-700;
+}
+.teal-400 {
+  @apply text-teal-400;
+}
+.purple-700 {
+  @apply text-purple-700;
+}
+.bG-red-700 {
+  @apply bg-red-700;
+}
+.bG-teal-400 {
+  @apply bg-teal-400;
+}
+.bG-purple-700 {
+  @apply bg-purple-700;
+}
+/* End Color */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  @apply text-2xl bg-light text-primary border-[1px] border-slate-300 rounded-full px-4 py-1.5;
+}
+
+.swiper-button-prev.swiper-button-disabled.swiper-button-prev::after {
+  display: none;
+}
+.swiper-button-next.swiper-button-disabled.swiper-button-next::after {
+  display: none;
+}
